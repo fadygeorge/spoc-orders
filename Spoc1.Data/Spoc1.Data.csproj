@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220908181247_ttuo.cs" />
+    <Compile Remove="Migrations\20220908181247_ttuo.Designer.cs" />
+    <Compile Remove="Migrations\20220909181321_y.cs" />
+    <Compile Remove="Migrations\20220909181321_y.Designer.cs" />
+    <Compile Remove="Migrations\20220909182901_yy.cs" />
+    <Compile Remove="Migrations\20220909182901_yy.Designer.cs" />
+    <Compile Remove="Migrations\20220909183117_yuu.cs" />
+    <Compile Remove="Migrations\20220909183117_yuu.Designer.cs" />
+    <Compile Remove="Migrations\20220909183600_yu.cs" />
+    <Compile Remove="Migrations\20220909183600_yu.Designer.cs" />
+    <Compile Remove="Migrations\20220909184830_yi.cs" />
+    <Compile Remove="Migrations\20220909184830_yi.Designer.cs" />
+    <Compile Remove="Migrations\20220909191314_yo.cs" />
+    <Compile Remove="Migrations\20220909191314_yo.Designer.cs" />
+    <Compile Remove="Migrations\20220909194416_p.cs" />
+    <Compile Remove="Migrations\20220909194416_p.Designer.cs" />
+    <Compile Remove="Migrations\20220909200126_pp.cs" />
+    <Compile Remove="Migrations\20220909200126_pp.Designer.cs" />
+    <Compile Remove="Migrations\20220909200304_ppp.cs" />
+    <Compile Remove="Migrations\20220909200304_ppp.Designer.cs" />
+    <Compile Remove="Migrations\20220909204228_l.cs" />
+    <Compile Remove="Migrations\20220909204228_l.Designer.cs" />
+    <Compile Remove="Migrations\20220909204615_ll.cs" />
+    <Compile Remove="Migrations\20220909204615_ll.Designer.cs" />
+    <Compile Remove="Migrations\20220909205423_m.cs" />
+    <Compile Remove="Migrations\20220909205423_m.Designer.cs" />
+    <Compile Remove="Migrations\20220909213338_m.cs" />
+    <Compile Remove="Migrations\20220909213338_m.Designer.cs" />
+    <Compile Remove="Migrations\20220911135733_nn.cs" />
+    <Compile Remove="Migrations\20220911135733_nn.Designer.cs" />
+    <Compile Remove="Migrations\20220911140059_ne.cs" />
+    <Compile Remove="Migrations\20220911140059_ne.Designer.cs" />
+    <Compile Remove="Migrations\20220911140152_ne.cs" />
+    <Compile Remove="Migrations\20220911140152_ne.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

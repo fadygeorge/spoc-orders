@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace spoc1.Logic.Models
+{
+    public class DistributorDTO
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public int AgentId { get; set; }
+    }
+}
