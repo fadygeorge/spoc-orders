@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Configuration;
 using spoc1.Data;
 using spoc1.Logic;
 using spoc1.Logic.Models;
@@ -6,6 +7,8 @@ using Spoc1.Data;
 using Spoc1.Logic.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Configuration;
 
 namespace Spoc1.Service
 {
@@ -14,12 +17,15 @@ namespace Spoc1.Service
         private UnitOfWork unitofwork;
         
         private readonly IMapper mapper;
+        IConfiguration iconfiguration;
 
-        public Service(UnitOfWork unitOfWork, IMapper mapper)
+        public Service(UnitOfWork unitOfWork, IMapper mapper, IConfiguration iconfiguration)
         {
             this.unitofwork = unitOfWork;
             this.mapper = mapper;
+            this.iconfiguration = iconfiguration;
         }
+
 
         public ResultDTO LoginAgent(LoginDTO log)
         {
@@ -28,7 +34,7 @@ namespace Spoc1.Service
             {
                 if (model.Password == log.Password)
                 {
-                    return new ResultDTO { IsSuccess = true, Token = "MySecretKey", Data = model.Id };
+                    return new ResultDTO { IsSuccess = true, Token = iconfiguration["ApiKey"], Data = model.Id };
                 }
                 else
                 {
@@ -48,7 +54,7 @@ namespace Spoc1.Service
             {
                 if (model.Password == log.Password)
                 {
-                    return new ResultDTO { IsSuccess = true, Token = "MySecretKey", Data = model.Id };
+                    return new ResultDTO { IsSuccess = true, Token = iconfiguration["ApiKey"], Data = model.Id };
                 }
                 else
                 {
@@ -68,7 +74,7 @@ namespace Spoc1.Service
             {
                 if (model.Password == log.Password)
                 {
-                    return new ResultDTO { IsSuccess = true, Token = "MySecretKey", Data = model.Id };
+                    return new ResultDTO { IsSuccess = true, Token = iconfiguration["ApiKey"], Data = model.Id };
                 }
                 else
                 {

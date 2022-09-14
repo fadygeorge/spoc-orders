@@ -8,6 +8,7 @@ using Spoc1Api.Attributes;
 using Microsoft.AspNetCore.Cors;
 using Spoc1.Service;
 using AutoMapper;
+using Microsoft.Extensions.Configuration;
 
 namespace Spoc1Api.Controllers
 {
@@ -20,10 +21,10 @@ namespace Spoc1Api.Controllers
         UnitOfWork unitofwork;
         private readonly IService service;
         
-        public AdminController(Context context, IMapper mapper)
+        public AdminController(Context context, IMapper mapper, IConfiguration configuration)
         {
             unitofwork = new UnitOfWork(context);
-            service = new Service(unitofwork, mapper);
+            service = new Service(unitofwork, mapper, configuration);
         }
 
 

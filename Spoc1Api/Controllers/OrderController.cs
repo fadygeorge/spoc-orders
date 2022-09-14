@@ -8,7 +8,11 @@ using spoc1.Logic.Models;
 using Spoc1.Logic.Models;
 using Spoc1.Service;
 using Spoc1Api.Attributes;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
+using Microsoft.Extensions.Configuration.Json;
+//using Microsoft.Extensions.Options.ConfigurationExtensions;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace Spoc1Api.Controllers
 {
@@ -19,10 +23,11 @@ namespace Spoc1Api.Controllers
     {
         UnitOfWork unitOfWork;
         private readonly IService service;
-        public OrderController(Context context, IMapper mapper)
+
+        public OrderController(Context context, IMapper mapper, IConfiguration iconfiguration)
         {
             unitOfWork = new UnitOfWork(context);
-            service = new Service(unitOfWork, mapper);
+            service = new Service(unitOfWork, mapper, iconfiguration);
         }
 
 

@@ -43,6 +43,9 @@ namespace Spoc1Api
             });
 
             services.AddAutoMapper(typeof(MappingProfile));
+
+            services.AddSingleton<IConfiguration>(Configuration);
+
             //services.AddSwaggerGen();
 
             //services.AddIdentity<IdentityUser, IdentityRole>(options => {
